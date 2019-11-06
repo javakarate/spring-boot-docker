@@ -9,6 +9,6 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String login(){
-        return LogUtil.getCurrentDateTime() +  " Logged in user!";
+        return LogUtil.getCurrentDateTime() +  " Logged in user";
     }
 }

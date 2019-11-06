@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SpringBootDockerApplicationTests {
 
-    private SpringBootDockerApplication subject = new SpringBootDockerApplication();
+    private SpringBootDockerApplication subjectToTest = new SpringBootDockerApplication();
 
     @Test
     void contextLoads() {
@@ -15,7 +15,10 @@ class SpringBootDockerApplicationTests {
 
     @Test
     void testGetRandomNumber() {
-        int randomValue = subject.getRandomValue();
+        // When
+        int randomValue = subjectToTest.getRandomValue();
+
+        // Then
         assertEquals(true, randomValue > 0 && randomValue < 99999);
     }
 }

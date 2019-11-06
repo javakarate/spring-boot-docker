@@ -12,6 +12,8 @@ import java.util.Random;
 @RestController
 public class SpringBootDockerApplication {
 
+    private static final Random random = new Random();
+
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDockerApplication.class, args);
     }
@@ -27,7 +29,6 @@ public class SpringBootDockerApplication {
     }
 
     public int getRandomValue(){
-        Random random = new Random();
         return random.nextInt(99999);
     }
 }
